@@ -1,0 +1,16 @@
+Client									Server
+(öffnet Verbindung)
+										OK username
+USER <username>
+(';' = ' ')
+										SETTINGS <min> <max> <operators>
+										[SETTINGS <min> <max> <operators>]
+										START <competitionTime>
+EXERCISES <exerciseId>							
+										EXERCISE <exerciseId> <operator> <number1> <number2> <solution>
+										EXERCISE <exerciseId> <operator> <number1> <solution>
+POINT <exerciseId> <0/1>
+(0: falsch, 1: richtig beantwortet)
+										[KICK]
+QUIT
+										OK bye

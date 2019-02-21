@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane maxWidth="600.0" prefHeight="40.0" prefWidth="600.0">
+               <children>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#closeBtn_onAction" stylesheets="@Buttons.css" text="Wettkampf schließen" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font name="Segoe UI" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Resources/arrow-left.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label fx:id="ipLabel" alignment="CENTER" text="Adresse: " AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="17.5">
+                     <font>
+                        <Font name="Segoe UI Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="signedInCountLabel" text="Angemeldet: 0" AnchorPane.leftAnchor="205.0" AnchorPane.topAnchor="17.5">
+                     <font>
+                        <Font name="Segoe UI Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <HBox alignment="CENTER" prefHeight="360.0" prefWidth="600.0">
+               <children>
+                  <VBox alignment="CENTER_LEFT" prefHeight="310.0" prefWidth="380.0">
+                     <children>
+                        <TableView fx:id="clientsTV" prefHeight="340.0" prefWidth="365.0" stylesheets="@TableView.css">
+                          <columns>
+                            <TableColumn fx:id="idColumn" editable="false" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" resizable="false" text="Id">
+                            	<cellValueFactory>
+									<PropertyValueFactory property="id" />
+								</cellValueFactory>
+                            </TableColumn>
+                            <TableColumn editable="false" maxWidth="134.0" minWidth="134.0" prefWidth="134.0" resizable="false" text="Nutzername">
+                            	<cellValueFactory>
+									<PropertyValueFactory property="username" />
+								</cellValueFactory>
+                            </TableColumn>
+                            <TableColumn editable="false" maxWidth="130.0" minWidth="130.0" prefWidth="130.0" resizable="false" sortType="DESCENDING" text="Bearbeitete Aufgaben">
+                            	<cellValueFactory>
+									<PropertyValueFactory property="editedExercises" />
+								</cellValueFactory>
+							</TableColumn>
+                            <TableColumn editable="false" maxWidth="60.0" minWidth="60.0" prefWidth="60.0" resizable="false" sortType="DESCENDING" text="Punkte">
+                              	<cellValueFactory>
+									<PropertyValueFactory property="score" />
+								</cellValueFactory>
+                            </TableColumn>
+                          </columns>
+                           <VBox.margin>
+                              <Insets right="15.0" />
+                           </VBox.margin>
+                        </TableView>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER_LEFT" prefHeight="360.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="startBtn" mnemonicParsing="false" onAction="#startBtn_onAction" prefHeight="60.0" prefWidth="180.0" stylesheets="@Buttons.css" text="Start">
+                           <font>
+                              <Font name="Segoe UI" size="24.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Label text="Wettkampflänge (Sekunden)">
+                           <VBox.margin>
+                              <Insets left="5.0" top="15.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Segoe UI" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="timeTF" alignment="CENTER" maxWidth="180.0" prefHeight="60.0" text="90">
+                           <VBox.margin>
+                              <Insets left="5.0" top="5.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Segoe UI" size="20.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="kickBtn" layoutX="10.0" layoutY="243.0" mnemonicParsing="false" onAction="#kickBtn_onAction" prefHeight="60.0" prefWidth="180.0" stylesheets="@Buttons.css" text="Teilnehmer entfernen">
+                           <font>
+                              <Font name="Segoe UI" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <VBox.margin>
+                              <Insets left="5.0" top="15.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="settingsBtn" layoutX="30.0" layoutY="80.0" mnemonicParsing="false" onAction="#settingsBtn_onAction" prefHeight="60.0" prefWidth="180.0" stylesheets="@Buttons.css" text="Einstellungen">
+                           <font>
+                              <Font name="Segoe UI" size="24.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="5.0" top="15.0" />
+                           </VBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox fx:id="rootVBox" alignment="CENTER" style="-fx-background-color: white;" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="712.0" prefWidth="450.0" VBox.vgrow="NEVER">
+         <padding>
+            <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+         </padding>
+         <children>
+            <TabPane style="-fx-border-color: lightgray; -fx-border-radius: 2 2 0 0;" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="NEVER">
+              <tabs>
+                <Tab text="Allgemein">
+                     <content>
+                        <VBox spacing="4.0">
+                           <children>
+                              <TitledPane animated="false" collapsible="false" text="Vorlagen">
+                                 <content>
+                                    <HBox fx:id="presetsVBox" alignment="TOP_CENTER" spacing="4.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" onAction="#fifthGradeBtn_onAction" stylesheets="@Buttons.css" text="5. Klasse">
+                                             <font>
+                                                <Font name="Segoe UI" size="12.0" />
+                                             </font></Button>
+                                          <Button mnemonicParsing="false" onAction="#sixthGradeBtn_onAction" stylesheets="@Buttons.css" text="6. Klasse">
+                                             <font>
+                                                <Font name="Segoe UI" size="12.0" />
+                                             </font></Button>
+                                       </children>
+                                    </HBox>
+                                 </content>
+                                 <font>
+                                    <Font name="Segoe UI" size="12.0" />
+                                 </font>
+                              </TitledPane>
+                              <TitledPane animated="false" collapsible="false" text="Ganze Zahlen" VBox.vgrow="ALWAYS">
+                                 <content>
+                                    <HBox fx:id="wholeNumbersVBox" alignment="TOP_CENTER" spacing="12.0">
+                                       <children>
+                                          <VBox HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Von 0 bis...">
+                                                   <font>
+                                                      <Font name="Segoe UI" size="12.0" />
+                                                   </font></Text>
+                                                <TextField fx:id="wholeNumbersTF" text="100">
+                                                   <font>
+                                                      <Font name="Segoe UI" size="12.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets top="2.0" />
+                                                   </VBox.margin>
+                                                </TextField>
+                                                <CheckBox fx:id="wholeNumbersAdditionCbx" mnemonicParsing="false" onAction="#checkBox_onAction" text="Addition">
+                                                   <VBox.margin>
+                                                      <Insets top="12.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="Segoe UI" size="12.0" />
+                                                   </font>
+                                                </CheckBox>
+                                                <CheckBox fx:id="wholeNumbersMultiplicationCbx" mnemonicParsing="false" onAction="#checkBox_onAction" text="Multiplikation">
+                                                   <VBox.margin>
+                                                      <Insets top="4.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="Segoe UI" size="12.0" />
+                                                   </font>
+                                                </CheckBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <CheckBox fx:id="wholeNumbersCB" mnemonicParsing="false" text="Negative Zahlen">
+                                                   <VBox.margin>
+                                                      <Insets right="40.0" top="20.0" />
+                                                   </VBox.margin>
+                                                </CheckBox>
+                                                <CheckBox fx:id="wholeNumbersSubtractionCbx" mnemonicParsing="false" onAction="#checkBox_onAction" text="Subtraktion">
+                                                   <VBox.margin>
+                                                      <Insets top="16.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="Segoe UI" size="12.0" />
+                                                   </font>
+                                                </CheckBox>
+                                                <CheckBox fx:id="wholeNumbersDivisionCbx" mnemonicParsing="false" onAction="#checkBox_onAction" text="Division">
+                                                   <VBox.margin>
+                                                      <Insets top="4.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="Segoe UI" size="12.0" />
+                                                   </font>
+                                                </CheckBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </content>
+                                 <font>
+                                    <Font name="Segoe UI" size="12.0" />
+                                 </font>
+                              </TitledPane>
+                              <TitledPane animated="false" collapsible="false" text="Dezimalzahlen">
+                                 <content>
+                                    <HBox fx:id="decimalsVBox" alignment="TOP_CENTER" spacing="12.0">
+                                       <children>
+                                          <VBox HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Von 0 bis...">
+                                                   <font>
+                                                      <Font name="Segoe UI" size="12.0" />
+                                                   </font></Text>
+                                                <TextField fx:id="decimalsTF" text="100">
+                                                   <VBox.margin>
+                                                      <Insets top="2.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="Segoe UI" size="12.0" />
+                                                   </font>
+                                                </TextField>
+                                                <CheckBox fx:id="decimalsAdditionCbx" mnemonicParsing="false" onAction="#checkBox_onAction" text="Addition">
+                                                   <VBox.margin>
+                                                      <Insets top="12.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="Segoe UI" size="12.0" />
+                                                   </font>
+                                                </CheckBox>
+                                                <CheckBox fx:id="decimalsMultiplicationCbx" mnemonicParsing="false" onAction="#checkBox_onAction" text="Multiplikation">
+                                                   <VBox.margin>
+                                                      <Insets top="4.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="Segoe UI" size="12.0" />
+                                                   </font>
+                                                </CheckBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <CheckBox fx:id="decimalsCB" mnemonicParsing="false" text="Negative Zahlen">
+                                                   <VBox.margin>
+                                                      <Insets right="40.0" top="20.0" />
+                                                   </VBox.margin>
+                                                </CheckBox>
+                                                <CheckBox fx:id="decimalsSubtractionCbx" mnemonicParsing="false" onAction="#checkBox_onAction" text="Subtraktion">
+                                                   <VBox.margin>
+                                                      <Insets top="16.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="Segoe UI" size="12.0" />
+                                                   </font>
+                                                </CheckBox>
+                                                <CheckBox fx:id="decimalsDivisionCbx" mnemonicParsing="false" onAction="#checkBox_onAction" text="Division">
+                                                   <VBox.margin>
+                                                      <Insets top="4.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="Segoe UI" size="12.0" />
+                                                   </font>
+                                                </CheckBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </content>
+                                 <font>
+                                    <Font name="Segoe UI" size="12.0" />
+                                 </font>
+                              </TitledPane>
+                              <AnchorPane>
+                                 <children>
+                                    <TitledPane animated="false" collapsible="false" text="Zweierpotenzen" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <content>
+                                          <HBox fx:id="powerOfTwoVBox" alignment="TOP_CENTER" spacing="12.0">
+                                             <children>
+                                                <VBox HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Von 1 bis...">
+                                                         <font>
+                                                            <Font name="Segoe UI" size="12.0" />
+                                                         </font></Text>
+                                                      <TextField fx:id="powerOfTwoTF" text="100">
+                                                         <VBox.margin>
+                                                            <Insets right="198.0" top="2.0" />
+                                                         </VBox.margin>
+                                                         <font>
+                                                            <Font name="Segoe UI" size="12.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </content>
+                                       <font>
+                                          <Font name="Segoe UI" size="12.0" />
+                                       </font>
+                                    </TitledPane>
+                                    <CheckBox fx:id="powerOfTwoCbx" mnemonicParsing="false" onAction="#checkBox_onAction" AnchorPane.leftAnchor="124.0" AnchorPane.topAnchor="3.0">
+                                       <font>
+                                          <Font name="Segoe UI" size="12.0" />
+                                       </font></CheckBox>
+                                 </children>
+                              </AnchorPane>
+                              <TitledPane animated="false" collapsible="false" text="Weitere Operationen">
+                                 <content>
+                                    <HBox fx:id="moreOperationsVBox" alignment="TOP_CENTER" spacing="12.0">
+                                       <children>
+                                          <VBox HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Von 1 bis...">
+                                                   <font>
+                                                      <Font name="Segoe UI" size="12.0" />
+                                                   </font></Text>
+                                                <TextField fx:id="moreOperationsTF" text="100">
+                                                   <VBox.margin>
+                                                      <Insets top="2.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="Segoe UI" size="12.0" />
+                                                   </font>
+                                                </TextField>
+                                                <CheckBox fx:id="squareNumbersCbx" mnemonicParsing="false" onAction="#checkBox_onAction" text="Quadratzahlen">
+                                                   <VBox.margin>
+                                                      <Insets top="12.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="Segoe UI" size="12.0" />
+                                                   </font>
+                                                </CheckBox>
+                                                <CheckBox fx:id="cubeRootsCbx" mnemonicParsing="false" onAction="#checkBox_onAction" text="Dritte Wurzeln">
+                                                   <VBox.margin>
+                                                      <Insets top="4.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="Segoe UI" size="12.0" />
+                                                   </font>
+                                                </CheckBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <CheckBox fx:id="squareRootsCbx" mnemonicParsing="false" onAction="#checkBox_onAction" text="Quadratwurzeln">
+                                                   <VBox.margin>
+                                                      <Insets right="40.0" top="52.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="Segoe UI" size="12.0" />
+                                                   </font>
+                                                </CheckBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </content>
+                                 <font>
+                                    <Font name="Segoe UI" size="12.0" />
+                                 </font>
+                              </TitledPane>
+                           </children>
+                           <padding>
+                              <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                  </Tab>
+                <Tab text="Duell">
+                     <content>
+                        <VBox alignment="TOP_CENTER">
+                           <padding>
+                              <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                           </padding>
+                           <children>
+                              <TitledPane animated="false" collapsible="false" text="Zeit">
+                                 <content>
+                                    <HBox fx:id="duelTimeVBox" alignment="TOP_CENTER" spacing="12.0">
+                                       <children>
+                                          <VBox HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Startzeit [s]">
+                                                   <font>
+                                                      <Font name="Segoe UI" size="12.0" />
+                                                   </font></Text>
+                                                <TextField fx:id="duelBaseTimeTF" text="20">
+                                                   <VBox.margin>
+                                                      <Insets top="2.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="Segoe UI" size="12.0" />
+                                                   </font></TextField>
+                                             </children>
+                                          </VBox>
+                                          <VBox HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Zeitverlust pro Runde [s]">
+                                                   <font>
+                                                      <Font name="Segoe UI" size="12.0" />
+                                                   </font></Text>
+                                                <TextField fx:id="duelTimeReductionTF" text="4">
+                                                   <VBox.margin>
+                                                      <Insets top="2.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="Segoe UI" size="12.0" />
+                                                   </font></TextField>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </content>
+                              </TitledPane>
+                           </children>
+                        </VBox>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+            <VBox minHeight="12.0" VBox.vgrow="ALWAYS" />
+            <HBox alignment="CENTER_RIGHT" spacing="4.0">
+               <children>
+                  <Button fx:id="applyBtn" mnemonicParsing="false" onAction="#applyBtn_onAction" stylesheets="@Buttons.css" text="Übernehmen">
+                     <font>
+                        <Font name="Segoe UI" size="12.0" />
+                     </font></Button>
+                  <Button mnemonicParsing="false" onAction="#cancelBtn_onAction" stylesheets="@Buttons.css" text="Abbrechen">
+                     <font>
+                        <Font name="Segoe UI" size="12.0" />
+                     </font></Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>
