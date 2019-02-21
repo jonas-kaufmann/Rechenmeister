@@ -21,3 +21,15 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+# folders
+bin/
+doc/*
+.vscode/
+build/*
+
+#files to not be ignored
+!doc/Generate Javadoc.cmd
+!build/package/
+!build/build.xml
+!build/build.cmd

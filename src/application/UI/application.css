@@ -1,0 +1,15 @@
+.root{
+    -fx-font-family: "Segoe UI";
+}
+
+.titled-pane {
+    -fx-animated: false;
+}
+
+.titled-pane > .title  {
+    -fx-font: 12px "Segoe UI";
+}
+
+.label-clickable:hover {
+    -fx-underline: true;
+}

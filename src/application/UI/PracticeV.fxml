@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="CENTER_LEFT" prefHeight="400.0" prefWidth="380.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#quitBtn_onAction" stylesheets="@Buttons.css" text="Menü">
+                     <font>
+                        <Font name="Segoe UI" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Resources/arrow-left.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label text="Aufgabe">
+                     <font>
+                        <Font name="Segoe UI Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="50.0" top="30.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="exerciseTF" alignment="CENTER" disable="true" editable="false" maxWidth="280.0" prefHeight="100.0" opacity="1">
+                     <font>
+                        <Font name="Segoe UI" size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="50.0" top="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="entryTF" alignment="CENTER" disable="true" maxWidth="280.0" onAction="#entryTF_onAction" prefHeight="100.0" promptText="Antwort">
+                     <VBox.margin>
+                        <Insets bottom="45.0" left="50.0" top="50.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Segoe UI" size="24.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" prefHeight="400.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#startBtn_onAction" prefHeight="60.0" prefWidth="180.0" stylesheets="@Buttons.css" text="Start">
+                     <font>
+                        <Font name="Segoe UI Bold" size="22.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label text="Ergebnis">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Segoe UI Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="resultTF" alignment="CENTER" disable="true" editable="false" maxWidth="180.0" prefHeight="60.0" opacity="1">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Segoe UI" size="24.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="10.0" layoutY="168.0" text="Gelöste Aufgaben">
+                     <font>
+                        <Font name="Segoe UI Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="doneTasksTF" alignment="CENTER" disable="true" editable="false" layoutX="10.0" layoutY="183.0" maxWidth="180.0" prefHeight="60.0" opacity="1">
+                     <font>
+                        <Font name="Segoe UI" size="24.0" />
+                     </font>
+                  </TextField>
+                  <Button layoutX="30.0" layoutY="80.0" mnemonicParsing="false" onAction="#settingsBtn_onAction" prefHeight="60.0" prefWidth="180.0" stylesheets="@Buttons.css" text="Einstellungen">
+                     <font>
+                        <Font name="Segoe UI Bold" size="22.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
