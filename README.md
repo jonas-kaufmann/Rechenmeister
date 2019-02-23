@@ -1,6 +1,9 @@
 # Call of Mathe: Rechenmeister
 Kopfrechentrainer-Projekt des Informatikkurses im S-Jahrgang 2019 des Nikolaus-von-Kues Gymnasiums
 
+## Vorraussetzungen
+Java 8,nach Möglichkeit neuster Service-Patch
+
 ## Lizenz
 Das Projekt läuft unter der Lizenz [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 
