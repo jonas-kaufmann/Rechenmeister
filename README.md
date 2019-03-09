@@ -1,8 +1,9 @@
-# Call of Mathe: Rechenmeister
+# Rechenmeister
 Kopfrechentrainer-Projekt des Informatikkurses im S-Jahrgang 2019 des Nikolaus-von-Kues Gymnasiums
 
 ## Voraussetzungen
 Benötigt Java 8, nach Möglichkeit neuster Service-Patch
+Bisher nur auf Windows 7 und Windows 10 getestet
 
 ## Lizenz
 Das Projekt läuft unter der Lizenz [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
@@ -26,3 +27,4 @@ Pfad zu Ant in 'build/build.cmd' eintragen und ausführen.
 ## Versionsprobleme
 - Exception beim Resizen mit Java 9 oder neuer (impl_getPeer Methode aus der Klasse Stage entfernt)
 - Fehlerhafte Fensterdarstellung nach Minimieren des maximierten Fensters in die Taskleiste (Bug der IconifiedProperty; in Service-Patch 172 und höher behoben)
+
