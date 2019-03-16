@@ -8,9 +8,9 @@ AppVerName=CoM-Rechenmeister 4.0
 AppPublisher=NvKG-Inf-S-2019
 AppComments=Call of Mathe: Rechenmeister
 AppCopyright=Copyright (C) 2019
-;AppPublisherURL=http://java.com/
-;AppSupportURL=http://java.com/
-;AppUpdatesURL=http://java.com/
+AppPublisherURL=http://rechenmeister.nvkg.de
+AppSupportURL=http://rechenmeister.nvkg.de
+AppUpdatesURL=http://rechenmeister.nvkg.de
 DefaultDirName={localappdata}\Rechenmeister
 DisableStartupPrompt=Yes
 DisableDirPage=No
@@ -20,7 +20,7 @@ DisableFinishedPage=Yes
 DisableWelcomePage=Yes
 DefaultGroupName=NvKG-Inf-S-2019
 ;Optional License
-LicenseFile=
+;LicenseFile=
 ;WinXP or above
 MinVersion=0,5.1 
 OutputBaseFilename=CoM-Rechenmeister
@@ -57,7 +57,18 @@ Filename: "{app}\CoM-Rechenmeister.exe"; Parameters: "-install -svcName ""CoM-Re
 [UninstallRun]
 Filename: "{app}\CoM-Rechenmeister.exe "; Parameters: "-uninstall -svcName CoM-Rechenmeister -stopOnUninstall"; Check: returnFalse()
 
+#define MyAppName "CoM-Rechenmeister"
+#define MyAppExeName "CoM-Rechenmeister.exe"
+
 [Code]
+function InitializeUninstall(): Boolean;
+  var ErrorCode: Integer;
+begin
+  ShellExec('open','taskkill.exe','/f /im {#MyAppExeName}','',SW_HIDE,ewNoWait,ErrorCode);
+  ShellExec('open','tskill.exe',' {#MyAppName}','',SW_HIDE,ewNoWait,ErrorCode);
+  result := True;
+end;
+
 function returnTrue(): Boolean;
 begin
   Result := True;
