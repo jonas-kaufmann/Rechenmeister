@@ -308,6 +308,12 @@ public class Exercisegenerator {
 			if (solutionNegated)
 				solution = solution.negate();
 
+			if(!data.settings.decimalsNegative && number2.compareTo(number1) == 1) {
+				BigDecimal x = number2;
+				number2 = number1;
+				number1 = x;
+			}
+
 			solution = number1.subtract(number2);
 		} else if (operator.equals("*d1")) {
 			int max = data.settings.decimalsMax;
