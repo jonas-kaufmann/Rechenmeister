@@ -106,7 +106,7 @@
 		<fx:application id="fxApplication"
 			name="CoM-Rechenmeister"
 			mainClass="application.Main"
-			version="4.0"
+			version="4.1"
 		/>
 	
 		<mkdir dir="build/classes/META-INF" />
@@ -122,7 +122,7 @@
 			<manifest>
 				<attribute name="Implementation-Vendor" value="NvKG-Inf-S-2019"/>
 				<attribute name="Implementation-Title" value="Call of Mathe: Rechenmeister"/>
-				<attribute name="Implementation-Version" value="4.0"/>
+				<attribute name="Implementation-Version" value="4.1"/>
 				<attribute name="JavaFX-Feature-Proxy" value="None"/>
 			</manifest>
 		</fx:jar>

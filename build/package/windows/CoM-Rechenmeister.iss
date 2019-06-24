@@ -3,8 +3,8 @@
 [Setup]
 AppId={{fxApplication}}
 AppName=Call of Mathe: Rechenmeister
-AppVersion=4.0
-AppVerName=CoM-Rechenmeister 4.0
+AppVersion=4.1
+AppVerName=CoM-Rechenmeister 4.1
 AppPublisher=NvKG-Inf-S-2019
 AppComments=Call of Mathe: Rechenmeister
 AppCopyright=Copyright (C) 2019
