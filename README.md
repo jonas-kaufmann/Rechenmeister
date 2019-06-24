@@ -18,7 +18,7 @@ Die Dokumentation kann mit der Datei 'Generate Javadoc.cmd' im Stammverzeichnis 
 
 ### Erzeugung einer Exe mit Installer
 Vorraussetzungen:
-- Inno-Setup Version 5.* installieren und Installationspfad in Umgebungsvariable 'Path' eintragen
+- Inno-Setup mit Inno Setup Preprocessor installieren und Installationspfad in Systemumgebungsvariable 'Path' eintragen
 - Apache Ant herunterladen und entpacken, Pfad auf 'bin'-Ordner in 'build/build.cmd' eintragen
 - Systemumgebungsvariable PATH oder Benutzervariable JAVA_HOME muss auf JDK zeigen
 
@@ -27,7 +27,7 @@ In folgenden Dateien Version erhöhen und bei Bedarf weiteres anpassen:
 - 'build/package/windows/Rechentrainer.iss'
 - 'build.fxbuild'
 
-'build.cmd' in CMD ausführen
+'build.cmd' ausführen, die .exe befindet sich in "/build/deploy/bundles/"
 
 ## Bekannte Java-Versionsprobleme
 - Exception beim Resizen mit Java 9 oder neuer (impl_getPeer Methode aus der Klasse Stage entfernt)
